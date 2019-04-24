@@ -5,7 +5,9 @@ A small route service which can be used to redirect HTTP traffic to HTTPS.
 ## Getting Started
 
 - Download this repository or `git clone` it.
-- Change directories into the repository and run `cf push http-to-https-rs`.
+- Change directories into the repository
+- Edit the manifest.yml file, minimally you'll need to change the route.
+- Run `cf push http-to-https-rs`.
 - Create a user-provided route service and bind that to the route or routes of your choosing. [See docs](http://docs.cloudfoundry.org/services/route-services.html#user-provided).
 - Run `cf logs http-to-https-rs`. You should see log messages like `Insecure request [<url>] being redirected` when HTTP requests are redirected to HTTPS.
 

@@ -1,0 +1,10 @@
+---
+applications:
+- name: http-to-https-rs
+  memory: 64M
+  buildpacks:
+    - go_buildpack
+  route:
+    - http-to-https-rs.cfapps.io
+  env:
+    GOPACKAGENAME: main
